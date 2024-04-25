@@ -1,13 +1,16 @@
-import Enredo from "./components/Enredo"
-import Header from "./components/Header"
-import Historia from "./components/Historia"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./pages/Home"
+import Quincy from "./pages/Quincy"
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <Home />
+  }
+])
 
 export default function App() {
   return (
-    <main className="bg-slate-400">
-      <div>
-        <Header />
-      </div>
-    </main>
+    <RouterProvider router={router} />
   )
 }
